@@ -1,0 +1,168 @@
+body {
+    background: #EEEEEE;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: cursive;
+}
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.todo {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.add-todo {
+    display: flex;
+    width: 500px;
+    height: 40px;
+    align-items: center;
+    background-color: #212121;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.input-task {
+    width: 80%;
+
+}
+
+.input-task input {
+    width: 425px;
+    height: 28px;
+    border-radius: 20px;
+    font-family: cursive;
+    font-size: 15px;
+
+}
+
+.add-task-button {
+    width: 95px;
+    display: flex;
+    justify-content: flex-end;
+    color: aqua;
+}
+
+.add-task-button button {
+    width: 50px;
+    height: 35px;
+    font-size: 22px;
+    background-color: aqua;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-task-button button:hover {
+    background-color: lightgreen;
+}
+
+.create-task  {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: cursive;
+}
+
+.create-task.checked {
+    background-color: grey;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.create-task.deleted {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s, visibility 0s 1s;
+}
+
+.create-task.hide {
+    display: none;
+}
+
+.task {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.action {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.action input {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+input[type='checkbox'] {
+    margin: 10px;
+    border-radius: 50px;
+}
+
+input[type='txt'] {
+    padding: 10px;
+    width: 50%;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #E0E0E0;
+}
+
+.action span {
+    color: #B71C1C;
+    cursor: pointer;
+    height: 25px;
+    font-size: 25px;
+    margin-bottom: 14px;
+}
+
+.action span:hover {
+    color: darkred;
+}
+
+.action span.btn-edit {
+    color: #1A237E;
+    padding-right: 8px;
+}
+
+.action span.btn-edit:hover {
+    color: darkcyan;
+}
+
+.del-all-tasks-button button {
+    background-color: #B71C1C;
+    color: black;
+    cursor: pointer;
+    font-family: cursive;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.del-all-tasks-button button:hover {
+    background-color: darkred;
+}
+
+.del-all-tasks-button button.hide {
+    display: none;
+}
