@@ -1,4 +1,4 @@
-# Demo TodoList
+# Demo
 
 Todo List
 
