@@ -43,9 +43,8 @@ h2 {
     border-radius: 20px;
     font-family: cursive;
     font-size: 15px;
-
 }
-
+   
 .add-task-button {
     width: 95px;
     display: flex;
