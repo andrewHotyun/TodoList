@@ -23,7 +23,8 @@
     }
 
     .input-task {
-        width: 80%;
+        width: 718px;
+        margin-left: 7px;
     }
 
     .input-task input {
