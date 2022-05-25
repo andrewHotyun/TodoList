@@ -15,23 +15,23 @@ let todoTasks = [];
     }
 
 
-function Task(task) {
-    this.task = task;
+function Task(description) {
+    this.description = description;
     this.completed = false;
 }
 
 
-function createTask(description, index) {
+function createTask(task, index) {
     return `
-        <div class="create-task ${description.completed ? 'checked' : ''}">
-             <div class="task">${description.task}</div>
+        <div class="create-task ${task.completed ? 'checked' : ''}">
+             <div class="task">${task.description}</div>
              <div class="action">           
                   <input onclick="completedTask(${index})" class="complete" type="checkbox" 
-                        ${description.completed ? 'checked' : ''}>
-                  <span onclick="editTask(${index})" class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></span>
+                        ${task.completed ? 'checked' : ''}>
+                  <span onclick="editTask(${index})" class="edit"><i class="fa-solid fa-pen-to-square"></i></span>
                   <span onclick="deletedTask(${index})" class="delete"><i class="fa-solid fa-trash"></i></span>
              </div>
-        </div>          
+        </div>            
     `
 }
 
@@ -53,7 +53,7 @@ function showTasks() {
     if (tasks.length > 0) {
         filterTasks();
         tasks.forEach((item, index) => {
-            allTasks.innerHTML += createTask(item, index)
+            allTasks.innerHTML += createTask(item, index);
         });
         todoTasks = document.querySelectorAll('.create-task');
         
@@ -64,7 +64,7 @@ showTasks();
 
 
 function storage() {
-    localStorage.setItem('tasks', JSON.stringify(tasks))
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 
@@ -104,10 +104,10 @@ function deletedTask(index) {
         let currTask = todoTasks[index]; 
         if (!currTask.classList.contains('edit')) { 
           currTask.classList.add('edit'); 
-          currTask.querySelector('.task').innerHTML = `<input type="txt" value="${tasks[index].task}">`; 
+          currTask.querySelector('.task').innerHTML = `<input type="txt" value="${tasks[index].description}">`; 
         } else {
           let newTask = currTask.querySelector('.task > input').value;
-          tasks[index].task = newTask;
+          tasks[index].description = newTask;
           currTask.querySelector('.task').innerText = newTask;
           setTimeout(() => {
             alertify.success('Task edited!')
