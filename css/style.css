@@ -139,12 +139,12 @@ input[type='txt'] {
     color: darkred;
 }
 
-.action span.btn-edit {
+.action span.edit {
     color: #1A237E;
     padding-right: 8px;
 }
 
-.action span.btn-edit:hover {
+.action span.edit:hover {
     color: darkcyan;
 }
 

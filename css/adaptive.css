@@ -121,13 +121,13 @@
         color: darkred;
     }
 
-    .action span.btn-edit {
+    .action span.edit {
         color: #1A237E;
         margin-left: 18px;
         font-size: 65px;
     }
     
-    .action span.btn-edit:hover {
+    .action span.edit:hover {
         color: darkcyan;
     }    
 
