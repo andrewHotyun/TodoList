@@ -24,16 +24,15 @@
 
     .input-task {
         width: 718px;
-        margin-left: 7px; 
+        margin-left: 7px;
     }
 
     .input-task input {
-        width: 785px;
+        width: 780px;
         height: 70px;
         border-radius: 25px;
         font-size: 38px;
         font-family: normal;
-
     }
 
     .add-task-button button {
@@ -44,7 +43,7 @@
         border-radius: 10px;
         cursor: pointer;
         font-size: 48px;
-        margin-right: -75px;
+        margin-right: -70px;
     }
 
     .add-task-button button:hover {
@@ -122,13 +121,13 @@
         color: darkred;
     }
 
-    .action span.btn-edit {
+    .action span.edit {
         color: #1A237E;
         margin-left: 18px;
         font-size: 65px;
     }
     
-    .action span.btn-edit:hover {
+    .action span.edit:hover {
         color: darkcyan;
     }    
 
