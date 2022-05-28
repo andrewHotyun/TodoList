@@ -44,6 +44,11 @@ h2 {
     font-family: cursive;
     font-size: 15px;
 }
+
+input::-webkit-input-placeholder { 
+    padding-left: 5px;
+    
+}
    
 .add-task-button {
     width: 95px;
