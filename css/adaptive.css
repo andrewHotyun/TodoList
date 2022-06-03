@@ -35,6 +35,11 @@
         font-family: normal;
     }
 
+    input::-webkit-input-placeholder { 
+        padding-left: 13px;
+        
+    }
+
     .add-task-button button {
         width: 80px;
         height: 80px;

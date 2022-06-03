@@ -100,7 +100,7 @@ function deletedTask(index) {
 }
 
 
-    function editTask(index) {
+function editTask(index) {
         let currTask = todoTasks[index]; 
         if (!currTask.classList.contains('edit')) { 
           currTask.classList.add('edit'); 
@@ -115,7 +115,7 @@ function deletedTask(index) {
           storage();
           showTasks();
         }
-      }
+ }
 
 
 addTask.addEventListener("click", () => {
