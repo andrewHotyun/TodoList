@@ -1,7 +1,5 @@
 # Demo
 
-QR Code
-
 ![Image alt](https://github.com/andrewHotyun/TodoList/raw/master/Demo/QRCode.JPG)
 
 Todo List
