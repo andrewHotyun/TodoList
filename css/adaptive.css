@@ -34,8 +34,13 @@
         font-size: 38px;
         font-family: normal;
     }
+<<<<<<< HEAD
 
     input::-webkit-input-placeholder { 
+=======
+    
+     input::-webkit-input-placeholder { 
+>>>>>>> 8de13a7d25898587db295ae87dfa07507483c673
         padding-left: 13px;
         
     }
