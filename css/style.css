@@ -153,7 +153,7 @@ input[type='txt'] {
     color: darkcyan;
 }
 
-.del-all-tasks-button button {
+.all-tasks-buttons button {
     background-color: #B71C1C;
     color: black;
     cursor: pointer;
@@ -163,10 +163,23 @@ input[type='txt'] {
     margin: 10px;
 }
 
-.del-all-tasks-button button:hover {
+.all-tasks-buttons button:hover {
     background-color: darkred;
 }
 
-.del-all-tasks-button button.hide {
+.all-tasks-buttons button.done {
+    background-color: #00E676;
+    color: black;
+    cursor: pointer;
+    font-family: cursive;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.all-tasks-buttons button.done:hover {
+    background-color:#81C784;
+}
+
+.all-tasks-buttons button.hide {
     display: none;
 }

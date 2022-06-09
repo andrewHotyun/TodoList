@@ -1,7 +1,8 @@
 const addTask = document.getElementById('add-task');
 const inputTask = document.getElementById('task-input');
 const allTasks = document.querySelector('.all-tasks');
-const delAll = document.getElementById('delete-all-tasks');
+const deleteAll = document.getElementById('delete-all-tasks');
+const completeAll = document.getElementById('done-all-tasks')
 
 
 let tasks = [];
@@ -37,18 +38,22 @@ function createTask(task, index) {
 
 
 function filterTasks() {
-    const activeTask = tasks.length && tasks.filter(item => item.completed === false);
-    const completedTask = tasks.length && tasks.filter(item => item.completed === true);
-    tasks = [...activeTask, ...completedTask];
+    tasks.sort((previous, next) => previous.completed - next.completed)
+    
+    // const activeTask = tasks.length && tasks.filter(item => item.completed === false);
+    // const completedTask = tasks.length && tasks.filter(item => item.completed === true);
+    // tasks = [...activeTask, ...completedTask];
 }
 
 
 function showTasks() {
     allTasks.innerHTML = "";
     if (tasks.length === 0) {
-        delAll.classList.add("hide");
+        deleteAll.classList.add("hide");
+        completeAll.classList.add("hide");
     } else {
-        delAll.classList.remove("hide");
+        deleteAll.classList.remove("hide");
+        completeAll.classList.remove("hide");
     }
     if (tasks.length > 0) {
         filterTasks();
@@ -134,11 +139,32 @@ addTask.addEventListener("click", () => {
 });
 
 
-delAll.addEventListener("click", () => {
-        setTimeout(() => {
-            alertify.success('All tasks deleted!')
-            }, 100)
-        tasks = [];
+completeAll.addEventListener("click", () => {  
+        for(let i = 0; i < tasks.length; ++i) {          
+          if (!tasks[i].completed) {
+            tasks[i].completed = true;
+            todoTasks[i].classList.add('checked')
+            setTimeout(() => {
+                alertify.success('Task done!')
+                }, 100)           
+          } else {
+            setTimeout(() => {
+                alertify.warning('Task not done!')
+                }, 100)   
+            tasks[i].completed = false;
+            todoTasks[i].classList.remove('checked')           
+          }
+        }
         storage();
-        showTasks();       
+        showTasks();      
+})
+
+
+deleteAll.addEventListener("click", () => {
+    setTimeout(() => {
+        alertify.success('All tasks deleted!')
+        }, 100)
+    tasks = [];
+    storage();
+    showTasks();       
 });
