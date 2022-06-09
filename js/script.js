@@ -37,9 +37,11 @@ function createTask(task, index) {
 
 
 function filterTasks() {
-    const activeTask = tasks.length && tasks.filter(item => item.completed === false);
-    const completedTask = tasks.length && tasks.filter(item => item.completed === true);
-    tasks = [...activeTask, ...completedTask];
+    tasks.sort((previous, next) => previous.completed - next.completed)
+    
+    // const activeTask = tasks.length && tasks.filter(item => item.completed === false);
+    // const completedTask = tasks.length && tasks.filter(item => item.completed === true);
+    // tasks = [...activeTask, ...completedTask];
 }
 
 
