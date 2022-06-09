@@ -36,6 +36,6 @@ All Tasks Done
 
 All Tasks Deleted
 
-![Image alt](https://github.com/andrewHotyun/TodoList/raw/master/Demo/AllTasksDeleted.jpg)
+![Image alt](https://github.com/andrewHotyun/TodoList/raw/master/Demo/AllTasksDeleted.jpg) 
 
 https://todos--list.000webhostapp.com/
